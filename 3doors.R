@@ -8,7 +8,7 @@ n <- 10000 # number of trials
 winning_door <- sample(1:3, n, replace = T) # which door is a winning door
 choice_1 <- sample(1:3, n, replace = T)
 
-# if we keep the door - the probablility
+# if we keep the door - the probability
 # of winning tends to 1/3.
 result_no_switch <- NULL
 for (i in 1:n){
