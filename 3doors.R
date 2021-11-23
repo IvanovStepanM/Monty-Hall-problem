@@ -4,10 +4,12 @@
 # This simulation assumes that we pick a door randomly
 # And a winning door is picked randomly.
 # Winning rates will be asserted consequently. 
-n <- 10000
+n <- 10000 # number of trials
 winning_door <- sample(1:3, n, replace = T) # which door is a winning door
 choice_1 <- sample(1:3, n, replace = T)
 
+# if we keep the door - the probablility
+# of winning tends to 1/3.
 result_no_switch <- NULL
 for (i in 1:n){
  if (choice_1[i] == winning_door[i]){
@@ -38,3 +40,5 @@ for (i in 1:n){
 }
 win_rate_switch <- sum(result_switch)/length(result_switch)
 win_rate_switch # 0.66
+## Basically, in the second part we swap 1 and 0,
+# thus the probability is simply 1-1/3 = 2/3
